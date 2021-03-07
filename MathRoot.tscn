@@ -1,0 +1,180 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://font/Roboto-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://MathRoot.gd" type="Script" id=2]
+[ext_resource path="res://font/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 128
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 29
+outline_color = Color( 0.0156863, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="MathRoot" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.918715
+margin_top = -2.15418
+margin_right = -0.918701
+margin_bottom = -2.15417
+color = Color( 0.141176, 0.470588, 0.439216, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Num1" type="Label" parent="ColorRect"]
+margin_left = 191.081
+margin_top = 74.204
+margin_right = 441.081
+margin_bottom = 379.204
+custom_fonts/font = SubResource( 1 )
+text = "10
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Num2" type="Label" parent="ColorRect"]
+margin_left = 519.999
+margin_top = 78.204
+margin_right = 769.999
+margin_bottom = 383.204
+custom_fonts/font = SubResource( 1 )
+text = "10
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlusOrMinus" type="Label" parent="ColorRect"]
+margin_left = 384.877
+margin_top = 69.102
+margin_right = 582.877
+margin_bottom = 374.102
+custom_fonts/font = SubResource( 1 )
+text = "+
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Question" type="Label" parent="ColorRect"]
+margin_left = -80.3524
+margin_top = 30.541
+margin_right = 339.648
+margin_bottom = 150.541
+custom_fonts/font = SubResource( 2 )
+text = "Question No.1
+
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Answer" type="Label" parent="ColorRect"]
+margin_left = 75.3524
+margin_top = 477.271
+margin_right = 396.352
+margin_bottom = 599.271
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="ColorRect"]
+margin_left = 691.0
+margin_top = -1.0
+margin_right = 1144.0
+margin_bottom = 119.0
+custom_fonts/font = SubResource( 2 )
+text = "
+
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreTotal" type="Label" parent="ColorRect"]
+margin_left = 567.0
+margin_top = 476.755
+margin_right = 1020.0
+margin_bottom = 596.755
+custom_fonts/font = SubResource( 2 )
+text = "
+
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="ColorRect"]
+margin_left = 75.5922
+margin_top = 276.96
+margin_right = 303.593
+margin_bottom = 433.96
+custom_fonts/font = SubResource( 3 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="ColorRect"]
+margin_left = 375.615
+margin_top = 277.357
+margin_right = 603.615
+margin_bottom = 434.357
+custom_fonts/font = SubResource( 3 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="ColorRect"]
+margin_left = 675.214
+margin_top = 276.889
+margin_right = 903.214
+margin_bottom = 433.889
+custom_fonts/font = SubResource( 3 )
+text = "100"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CorrectGuess" type="Label" parent="ColorRect"]
+margin_left = 828.73
+margin_top = 68.5859
+margin_right = 1007.73
+margin_bottom = 172.586
+custom_fonts/font = SubResource( 4 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ColorRect/Button1" to="." method="_on_Button1_pressed"]
+[connection signal="pressed" from="ColorRect/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="ColorRect/Button3" to="." method="_on_Button3_pressed"]
